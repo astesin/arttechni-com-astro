@@ -4,12 +4,12 @@ import i18n from "@astrolicious/i18n";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://www.yourwebsite.com", // update me!
+  site: "https://arttechni.com",
   integrations: [
     icon(),
     i18n({
       defaultLocale: "en",
-      locales: ["fr", "en"],
+      locales: ["fr", "en", "ru", "uk"],
       client: {
         data: true,
         paths: true,
@@ -28,6 +28,8 @@ export default defineConfig({
           // key/value pairs of all languages supported
           en: 'en-US', // The `defaultLocale` value must be present in `locales` keys
           fr: 'fr-FR',
+          ru: 'ru-RU',
+          uk: 'uk-UA'
         },
       },
     }),

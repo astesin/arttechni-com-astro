@@ -1,0 +1,67 @@
+#
+# This is the src/routes/admin/config.yml for Decap CMS (locally hosted 3.8.2 version)
+#
+# We use DecapBridge auth (required) because Netlify Identity is deprecated
+#
+# THE LOCAL DEVELOPMENT PART - COMMENT IT OUT WHEN YOU DEPLOY
+#
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+#- BROKEN not supported:  url: http://localhost:8081/api/v1
+#- BROKEN not supported:  allowed_hosts: ['localhost', '127.0.0.1']
+#
+# THE PRODUCTION PART - UNCOMMENT IT WHEN YOU COMMIT & PUSH (PUSH WILL AUTODEPLOY)
+#
+# backend:
+#   name: git-gateway
+#   repo: astesin/arttechni-com-astro
+#   branch: main
+#   identity_url: https://auth.decapbridge.com/sites/6d0b1e08-ce5a-4239-a336-e74fa3302087
+#   gateway_url: https://gateway.decapbridge.com
+# 
+# Quickly see who did what (optional)
+commit_messages:
+  create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+  update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+  delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+  uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+  deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+  openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+# Add site links in DecapCMS (optional)
+site_url: https://arttechni.com
+
+# Logo for Decap login page. Change url to a link to the image you want to use, no file paths, must be a URL
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+media_folder: src/assets/images/blog # Location where files will be stored in the repo - we store them in src so that Astro can optimize them.
+public_folder: src/assets/images/blog # Ensure that this path is the same as the media_folder path above.
+
+i18n:
+  structure: multiple_folders
+  locales: [en, fr, uk, ru]   # Match your Astro config
+  default_locale: en          # Match your Astro config
+
+collections:
+  - name: "blog"  # Used in routes, e.g., /admin/collections/blog. Is also the key when fetching data from the CMS.
+    label: "Blog" # Used in the admin dashboard UI
+    i18n: true
+    # The path to the folder where the documents are stored
+    # currently BROKEN - decap-cms create the directory named literally as "src/content/blog/{{locale}}"
+    # and breaks the collection schema, established by Astro 5
+    # Decap CMS integration into this project is now deferred until I will have time to fix it
+    folder: "src/content/blog/{{locale}}"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
+    fields: # The fields for each document
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Description", name: "description", widget: "string", i18n: true }
+      - { label: "Author", name: "author", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime", i18n: true }
+      - { label: "Cover Image", name: "image", widget: "image", i18n: true }
+      - { label: "Image Caption", name: "imageAlt", widget: "string", i18n: true }
+      - { label: "Is it a featured post?", name: "isFeatured", widget: "boolean", default: false, i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }

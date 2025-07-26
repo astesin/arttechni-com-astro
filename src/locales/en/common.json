@@ -6,11 +6,13 @@
     "project-2": "Project 2",
     "blog": "Blog",
     "contact": "Contact",
-    "theme-label": "Choisissez le thème",
-    "language-label": "Choisissez la langue",
+    "theme-label": "Choose appearance",
+    "language-label": "Choose language",
     "languageSelect": {
         "en": "English",
-        "fr": "French"
+        "fr": "French",
+        "uk": "Ukrainian",
+        "ru": "Russian"
     },
     "themeSelect": {
         "accessibleLabel": "Select Theme",
@@ -18,28 +20,28 @@
         "dark": "Dark",
         "auto": "Auto"
     },
-    "quote": "Get Free Quote",
-    "estimate": "Get an estimate now",
+    "quote": "Ask Us for the Proposal",
+    "estimate": "Get ideas and an estimate for your project",
     "ctaComponent": {
         "title": "Get it done",
         "subtitle": "With us today",
         "message": "Say something catchy, informative, and encouraging to click the button to go to the contact page. I like to add these to the bottom of all pages.",
-        "cta": "Get an estimate now",
+        "cta": "Get new ideas",
         "alt": ""
     },
     "about-page": {
         "landing": "About",
         "topper": "About",
-        "title": "About Company Title",
-        "p-1": "Our company was created In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-        "p-2": "We believe that In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-        "p-3": "It's important In consequat tincidunt turpis sit amet imperdiet.",
-        "rank": "CEO-Founder",
+        "title": "About ARTTECHNI.COM",
+        "p-1": "Introductory description.",
+        "p-2": "Our values, principles, policies.",
+        "p-3": "Other important information.",
+        "rank": "The Leader",
         "cta": "Our projects"
     },
     "footer": {
         "information": "Information",
-        "services": "Services",
+        "services": "Competencies",
         "contact": "Contact",
         "click": "Click to email",
         "p": "Extra content if you need it, if not you can delete this whole p tag. I usually do.",

@@ -1,21 +1,31 @@
 {
-  "name": "advanced-astro-i18n",
+  "name": "arttechni-com-astra",
   "type": "module",
-  "version": "2.2.1",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
+		"astro": "astro dev",
+		"dev:astro": "astro dev",
+		"dev:cms": "cross-env PORT=8081 decap-server",
+		"dev": "concurrently \"yarn dev:cms\" \"yarn dev:astro\" --prefix \"[{name}]\" --names \"CMS,ASTRO\" --kill-others --success first",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview"
+	},
   "dependencies": {
+    "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "^3.3.1",
     "@astrolicious/i18n": "^0.6.1",
     "astro": "^5.7.12",
     "astro-icon": "^1.1.4",
     "autoprefixer": "^10.4.20",
     "i18next": "^23.16.8",
-    "less": "^4.2.1"
-  }
+    "less": "^4.2.1",
+    "typescript": "^5.6.3"
+  },
+	"devDependencies": {
+		"concurrently": "^9.2.0",
+		"cross-env": "^7.0.3",
+		"decap-server": "^3.3.0",
+		"postcss": "^8.1.0"
+	}
 }

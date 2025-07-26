@@ -1,15 +1,15 @@
 {
-	"name": "Code Stitch Web Designs",
-	"email": "help@codestitch.app",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
+	"name": "ARTTECHNI.COM Video Production",
+	"email": "stesin@gmail.com",
+	"phoneForTel": "0035796127814",
+	"phoneFormatted": "+357 (96) 127-814",
 	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+		"lineOne": "First Address Line Is Unknown Yet",
+		"lineTwo": "Second Address Line Is Yet Unknown, Too",
+		"city": "Agios Tychonos",
+		"state": "Limassol",
+		"zip": "4532",
+		"mapLink": "https://maps.app.goo.gl/U4kBsgd4qEg6GnG67"
 	},
-	"domain": "www.codestitch.app"
+	"domain": "artttechni.com"
 }

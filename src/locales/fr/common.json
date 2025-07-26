@@ -10,7 +10,9 @@
     "language-label": "Select language",
     "languageSelect": {
         "en": "Anglais",
-        "fr": "Français"
+        "fr": "Français",
+        "uk": "Ukrainien",
+        "ru": "Russe"
     },
     "themeSelect": {
         "accessibleLabel": "Choisissez le thème",
