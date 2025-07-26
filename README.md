@@ -1,4 +1,4 @@
-  <h3 align="center">Advanced Astro v4 - i18n</h3>
+# ARTTECHNI.COM Website - built upon the Advanced Astro v5 + i18n Template
 
   <p align="center">
     This Astro advanced kit includes a pre-configured multi-language setup, along with five pages filled with CodeStitch components. Everything is ready to go right from the start, offering a fantastic introduction to the advantages of a Static Site Generator, complete with LESS preprocessing and a blog powered by Astro’s content collections. 
@@ -9,22 +9,45 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Getting Started](#gettingStarted)
-- [Commands](#commands)
-- [Prerequisites](#prerequisites)
-- [Features](#features)
-- [Project Structure](#projectStructure)
-  - [Root Files and Folders](#rootFilesAndFolders)
-  - [Source Files and Folders](#sourceFilesAndFolders)
-- [Expanding the Project](#expandingTheProject)
-  - [i18n](#i18n)
-  - [Custom Picture component](#Custompicturecomponent)
-  - [Astro Content Collections](#AstroContentCollections)
-  - [Preloading images](#preloadingimages)
-- [Deployment](#deployment)
-- [Acknowledgments](#acknowledgments)
-- [Conclusion](#conclusion)
+- [ARTTECHNI.COM Website - built upon the Advanced Astro v5 + i18n Template](#arttechnicom-website---built-upon-the-advanced-astro-v5--i18n-template)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Getting Started](#getting-started)
+  - [Commands](#commands)
+  - [Prerequisites](#prerequisites)
+  - [Features](#features)
+  - [Project Structure](#project-structure)
+    - [Project Tree](#project-tree)
+    - [Source Files and Folders](#source-files-and-folders)
+    - [Source Files and Folders](#source-files-and-folders-1)
+      - [`node_modules/*`](#node_modules)
+      - [`dist/`](#dist)
+      - [`public/*`](#public)
+      - [`src/*`](#src)
+        - [`src/assets`](#srcassets)
+        - [`src/components`](#srccomponents)
+        - [`src/content`](#srccontent)
+        - [`src/data`](#srcdata)
+        - [`src/icons`](#srcicons)
+        - [`src/layouts`](#srclayouts)
+        - [`src/locales`](#srclocales)
+        - [`src/pages`](#srcpages)
+        - [`src/routes`](#srcroutes)
+        - [`src/styles`](#srcstyles)
+        - [`src/utils`](#srcutils)
+      - [`astro.config.mjs`](#astroconfigmjs)
+      - [`package.json` and `package-lock.json`](#packagejson-and-package-lockjson)
+      - [`tsconfig.json`](#tsconfigjson)
+  - [Expanding the Project](#expanding-the-project)
+    - [i18n](#i18n)
+      - [Localizing slugs for routes](#localizing-slugs-for-routes)
+      - [Localizing slugs for blog posts](#localizing-slugs-for-blog-posts)
+    - [Custompicturecomponent](#custompicturecomponent)
+    - [Astro content collections](#astro-content-collections)
+    - [Preloading images](#preloading-images)
+  - [Deployment](#deployment)
+  - [Acknowledgments](#acknowledgments)
+  - [Conclusion](#conclusion)
 
 <a name="overview"></a>
 
@@ -84,7 +107,7 @@ Only the vanilla web technologies are _required_ before using this kit, with fam
 
 ## Features
 
-* Runs on Astro v4
+* Runs on Astro v5
 * i18n setup ready to go, complete with routing and LanguageSelect component
 * Dark mode
 * Astro's `<ViewTransitions />` integration
@@ -133,20 +156,20 @@ Astro leverages an opinionated folder layout for your project. Every Astro proje
 |   ├── assets/
 |   |   └── images/
 |   ├── components/
-│   │   └── TemplateComponents 
+│   │   └── TemplateComponents
 │   ├── content/ /
-│   │   ├── blog/ 
-│   │   └── config.ts 
+│   │   ├── blog/
+│   │   └── config.ts
 │   ├── data/
-│   │   ├── client.json 
-│   │   └── navData.json 
-│   ├── icons/ 
-│   ├── locales/ 
-│   │   ├── en 
+│   │   ├── client.json
+│   │   └── navData.json
+│   ├── icons/
+│   ├── locales/
+│   │   ├── en
 │   │   └── fr
 │   ├── layouts/
 │   │   └── BaseLayout.astro
-│   ├── routes/ 
+│   ├── routes/
 |   |   |── index.astro /* Accessible at / and /fr by default */
 |   |   |—— about.astro /* Accessible at /about and /fr/about by default etc. */
 |   |   |—— contact.astro
